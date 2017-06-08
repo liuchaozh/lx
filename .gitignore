@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+/.vs
+/Project3/obj
+/Project3/bin
