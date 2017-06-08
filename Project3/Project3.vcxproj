@@ -26,6 +26,26 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\nginx.cpp" />
+    <ClCompile Include="core\ngx_connection.cpp" />
+    <ClCompile Include="core\ngx_cycle.cpp" />
+    <ClCompile Include="core\ngx_log.cpp" />
+    <ClCompile Include="core\ngx_rbtree.cpp" />
+    <ClCompile Include="os\unix\ngx_socket.cpp" />
+    <ClCompile Include="os\unix\ngx_time.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\ngx_config.h" />
+    <ClInclude Include="core\ngx_connection.h" />
+    <ClInclude Include="core\ngx_core.h" />
+    <ClInclude Include="core\ngx_cycle.h" />
+    <ClInclude Include="core\ngx_log.h" />
+    <ClInclude Include="core\ngx_rbtree.h" />
+    <ClInclude Include="os\unix\ngx_posix_config.h" />
+    <ClInclude Include="os\unix\ngx_socket.h" />
+    <ClInclude Include="os\unix\ngx_time.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{2daf099a-3a83-4fc3-b54c-737e507e79e3}</ProjectGuid>
     <Keyword>Linux</Keyword>
@@ -60,16 +80,11 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
-  <ItemGroup>
-    <ClCompile Include="ngx_connection.cpp" />
-    <ClCompile Include="ngx_cycle.cpp" />
-    <ClCompile Include="nginx.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ngx_connection.h" />
-    <ClInclude Include="ngx_cycle.h" />
-  </ItemGroup>
-  <ItemDefinitionGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)os/unix;$(ProjectDir)core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
 </Project>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="core">
+      <UniqueIdentifier>{f9672df0-f89d-49e4-8b22-8cb9b1b301e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="os">
+      <UniqueIdentifier>{9fef20ee-14bb-42f4-864e-fc7e25095ea2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="os\unix">
+      <UniqueIdentifier>{5791714b-fc2f-4a74-915d-4829e752b9a9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\nginx.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ngx_connection.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ngx_cycle.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="os\unix\ngx_socket.cpp">
+      <Filter>os\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ngx_log.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ngx_rbtree.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="os\unix\ngx_time.cpp">
+      <Filter>os\unix</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\ngx_connection.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ngx_cycle.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="os\unix\ngx_socket.h">
+      <Filter>os\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ngx_core.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="os\unix\ngx_posix_config.h">
+      <Filter>os\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ngx_config.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ngx_log.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ngx_rbtree.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="os\unix\ngx_time.h">
+      <Filter>os\unix</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
