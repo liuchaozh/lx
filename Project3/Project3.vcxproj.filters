@@ -10,6 +10,9 @@
     <Filter Include="os\unix">
       <UniqueIdentifier>{5791714b-fc2f-4a74-915d-4829e752b9a9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="event">
+      <UniqueIdentifier>{d02a7587-5d5c-488a-8f6a-4fa44c4d0399}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="core\nginx.cpp">
@@ -32,6 +35,21 @@
     </ClCompile>
     <ClCompile Include="os\unix\ngx_time.cpp">
       <Filter>os\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ngx_palloc.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ngx_module.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ngx_conf_file.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="event\ngx_event.cpp">
+      <Filter>event</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ngx_times.cpp">
+      <Filter>core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +79,21 @@
     </ClInclude>
     <ClInclude Include="os\unix\ngx_time.h">
       <Filter>os\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ngx_palloc.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ngx_module.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ngx_conf_file.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="event\ngx_event.h">
+      <Filter>event</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ngx_times.h">
+      <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

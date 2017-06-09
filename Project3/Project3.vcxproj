@@ -28,20 +28,30 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="core\nginx.cpp" />
+    <ClCompile Include="core\ngx_conf_file.cpp" />
     <ClCompile Include="core\ngx_connection.cpp" />
     <ClCompile Include="core\ngx_cycle.cpp" />
     <ClCompile Include="core\ngx_log.cpp" />
+    <ClCompile Include="core\ngx_module.cpp" />
+    <ClCompile Include="core\ngx_palloc.cpp" />
     <ClCompile Include="core\ngx_rbtree.cpp" />
+    <ClCompile Include="core\ngx_times.cpp" />
+    <ClCompile Include="event\ngx_event.cpp" />
     <ClCompile Include="os\unix\ngx_socket.cpp" />
     <ClCompile Include="os\unix\ngx_time.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\ngx_config.h" />
+    <ClInclude Include="core\ngx_conf_file.h" />
     <ClInclude Include="core\ngx_connection.h" />
     <ClInclude Include="core\ngx_core.h" />
     <ClInclude Include="core\ngx_cycle.h" />
     <ClInclude Include="core\ngx_log.h" />
+    <ClInclude Include="core\ngx_module.h" />
+    <ClInclude Include="core\ngx_palloc.h" />
     <ClInclude Include="core\ngx_rbtree.h" />
+    <ClInclude Include="core\ngx_times.h" />
+    <ClInclude Include="event\ngx_event.h" />
     <ClInclude Include="os\unix\ngx_posix_config.h" />
     <ClInclude Include="os\unix\ngx_socket.h" />
     <ClInclude Include="os\unix\ngx_time.h" />
@@ -82,7 +92,9 @@
   <PropertyGroup Label="UserMacros" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)os/unix;$(ProjectDir)core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>/root/projects/Project3/os/unix;/root/projects/Project3/core;/root/projects/Project3/event;$(ProjectDir)os/unix;$(ProjectDir)core;$(ProjectDir)event;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <Verbose>true</Verbose>
     </ClCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

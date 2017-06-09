@@ -1,4 +1,5 @@
-#include "ngx_connection.h"
+#include <ngx_config.h>
+#include <ngx_core.h>
 
 namespace ngx {
 
